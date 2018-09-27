@@ -7,23 +7,22 @@ module.exports = grunt => {
          js:{
              src:['js/*.js'],
              dest:'build/scripts.js'
+         },
+         css: {
+             src: ['css/*.css'],
+             dest:'build/styles.css'
          } 
      }  
    });
    
    // load 
+   
    grunt.loadNpmTasks('grunt-contrib-concat');
 
-
-
-
    // register task 
-   grunt.registerTask('run' , () => {
-       console.log('Running Task ')
-   })
-   grunt.registerTask('sleep', () => {
-       console.log('sleeping')
-   })
+   grunt.registerTask('concat-css' , ['concat:css'])
+   grunt.registerTask('concat-js' , ['concat:js'])
+   
 
    
 }
