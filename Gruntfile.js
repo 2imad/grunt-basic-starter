@@ -18,17 +18,22 @@ module.exports = grunt => {
                  dest: 'xcc/styles.css'
              }]
          }
+     },
+     uglify: {
+         build: {
+             src: 'build/scripts.js',
+             dest: 'build/scripts.js'
+         }
      }  
    });
    
    // load 
    grunt.loadNpmTasks('grunt-contrib-concat');
    grunt.loadNpmTasks('grunt-sass');
+   grunt.loadNpmTasks('grunt-contrib-uglify');
    
    // register task 
    grunt.registerTask('concat-css' , ['concat:css'])
    grunt.registerTask('concat-js' , ['concat:js'])
-   
-
-   
 }
+

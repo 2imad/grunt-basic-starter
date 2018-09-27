@@ -19,6 +19,7 @@
   "devDependencies": {
     "grunt": "^1.0.3",
     "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-uglify": "^4.0.0",
     "grunt-sass": "^3.0.1",
     "node-sass": "^4.9.3"
   }
