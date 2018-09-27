@@ -3,7 +3,12 @@ module.exports = grunt => {
 
    // Config
    grunt.initConfig({
-
+     concat: {
+         js:{
+             src:['js/*.js'],
+             dest:'build/scripts.js'
+         } 
+     }  
    });
    
    // load 
